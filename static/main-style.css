@@ -6,11 +6,8 @@
     justify-content: center;
 }
 
-.container {
-    position: relative;
-    display: inline-block;
-}
 
+/* Styling of the link that makes the redText appear */
 #hoverText {
     text-decoration: none;
     cursor: pointer;
@@ -42,6 +39,7 @@
     color: cadetblue;
 }
 
+/* Styling of the appearing text  */
 #redText {
     color:brown;
     opacity: 0;
@@ -53,4 +51,11 @@
 #hoverText:hover #redText {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+/* Styling of the front page image */
+#frontpageimage {
+    width: 75%;
+    height: auto;
 }
