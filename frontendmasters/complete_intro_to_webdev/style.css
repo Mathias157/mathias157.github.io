@@ -1,0 +1,153 @@
+* {
+    /* box-sizing: border-box; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* The numbers are formatted here */
+.buttons {
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(180, 180, 180);
+    border-color: black;
+    border-width: 0px;
+    color: white;
+    font-size: 30px;
+    transition: background-color .3s ease;   
+}
+
+/* Hover animation */
+.buttons:hover {
+    background-color: rgb(128, 128, 128);
+}
+
+/* Click animation */
+.buttons:active {
+    background-color: black;
+    color: white;
+    transition: none;
+}
+
+
+#zero {
+    border-left: 1px solid black;
+    grid-area: zero;
+    width: 210px;
+}
+
+#one {
+    border-left: 1px solid black;
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    border-left: 1px solid black;
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    border-left: 1px solid black;
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#clear {
+    border-left: 1px solid black;
+    grid-area: clear;
+    width: 140px;
+}
+
+#delete {
+    grid-area: delete;
+    width: 70px;
+}
+
+#divide {
+    grid-area: divide;
+    width: 70px;
+}
+
+#multiply {
+    grid-area: multiply;
+    width: 70px;
+}
+#add {
+    grid-area: add;
+    width: 70px;
+}
+#subtract {
+    grid-area: subtract;
+    width: 70px;
+}
+#equals {
+    grid-area: equals;
+    width: 70px;
+}
+
+
+
+/* The screen */
+.screen {
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    background-color: black;
+    align-content: center;
+    text-align: right;
+    color: white;
+    font-size: 40px;
+    grid-area: screen;
+    margin: 0;
+    padding-right: 20px;
+    width: 258px;
+    height: 70px;
+}
+
+
+/* The calculator grid */
+.grid-div {
+    display: grid;
+    justify-content: center;
+    padding: 0;
+    margin-top: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
+    row-gap: 0;
+    column-gap: 0;
+    grid-template-areas:
+        "screen screen screen screen"
+        "clear clear delete divide"
+        "seven eight nine multiply"
+        "four five six subtract"
+        "one two three add"
+        "zero zero zero equals";
+}
+
+/* Add border to the right and bottom of all elements */
+.grid-div > * {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
