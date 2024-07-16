@@ -9,26 +9,29 @@
 </head>
 
 <body>
+    <div class="title">The Lydian Calculator</div>
+    <div class="credit">by Mathias Berg Rosendal</div>
     <div class="grid-div">
         <div class="screen" data-temporary_number="0" data-last_operation="none">0</div>
+        <button class="buttons" id="zero" data-sound="zero-sound.mp3">0</button>
         <button class="buttons" id="one"   data-sound="one-sound.mp3">1</button>
         <button class="buttons" id="two"   data-sound="two-sound.mp3">2</button>
         <button class="buttons" id="three" data-sound="three-sound.mp3">3</button>
         <button class="buttons" id="four"  data-sound="four-sound.mp3">4</button>
         <button class="buttons" id="five"  data-sound="five-sound.mp3">5</button>
-        <button class="buttons" id="six"   data-sound="six-sound.wav">6</button>
+        <button class="buttons" id="six"   data-sound="six-sound.mp3">6</button>
         <button class="buttons" id="seven" data-sound="seven-sound.mp3">7</button>
         <button class="buttons" id="eight" data-sound="eight-sound.mp3">8</button>
         <button class="buttons" id="nine"  data-sound="nine-sound.mp3">9</button>
-        <button class="buttons" id="clear" data-sound="">Clear</button>
-        <button class="buttons" id="delete" data-sound="">&larr;</button>
-        <button class="buttons" id="divide" data-sound="">/</button>
-        <button class="buttons" id="multiply" data-sound="">&#10799;</button>
-        <button class="buttons" id="subtract" data-sound="">-</button>
-        <button class="buttons" id="add" data-sound="">+</button>
-        <button class="buttons" id="zero" data-sound="">0</button>
-        <button class="buttons" id="equals" data-sound="">=</button>
+        <button class="buttons" id="clear" data-sound="clear-sound.mp3">Clear</button>
+        <button class="buttons" id="delete" data-sound="clear-sound.mp3">&larr;</button>
+        <button class="buttons" id="divide" data-sound="divide-sound.mp3">/</button>
+        <button class="buttons" id="multiply" data-sound="multiply-sound.mp3">&#10799;</button>
+        <button class="buttons" id="subtract" data-sound="subtract-sound.mp3">-</button>
+        <button class="buttons" id="add" data-sound="add-sound.mp3">+</button>
+        <button class="buttons" id="equals" data-sound="equals-sound.mp3">=</button>
     </div>
+    <div class="quote"><p style="font-style: italic">"Arithmetic has never been more musical"</p>- Thom Yorke</div>
 </body>
 <script src="java.js">
 </script>
