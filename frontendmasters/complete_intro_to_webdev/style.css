@@ -1,5 +1,4 @@
 * {
-    /* box-sizing: border-box; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -29,26 +28,26 @@
     padding: 0;
     width: 70px;
     height: 70px;
-    background-color: rgb(180, 180, 180);
+    background-color: #fdf0d5;
     border-color: black;
     border-width: 0px;
-    color: white;
+    color: black;
     font-size: 30px;
     transition: background-color .3s ease;   
 }
 
+
 /* Hover animation */
 .buttons:hover {
-    background-color: rgb(128, 128, 128);
+    background-color: #669bbc;
 }
 
 /* Click animation */
 .buttons:active {
-    background-color: black;
-    color: white;
+    background-color: #003049;
+    /* color: white; */
     transition: none;
 }
-
 
 #zero {
     border-left: 1px solid black;
@@ -109,25 +108,78 @@
 #divide {
     grid-area: divide;
     width: 70px;
+    background-color: #c1121f;
 }
 
 #multiply {
     grid-area: multiply;
     width: 70px;
+    background-color: #c1121f;
 }
+
 #add {
     grid-area: add;
     width: 70px;
+    background-color: #c1121f;
 }
+
 #subtract {
     grid-area: subtract;
     width: 70px;
+    background-color: #c1121f;
 }
+
 #equals {
     grid-area: equals;
     width: 70px;
+    background-color: #c1121f;
 }
 
+#divide:hover {
+    background-color: #669bbc;
+}
+
+#multiply:hover  {
+    background-color: #669bbc;
+}
+
+#add:hover  {
+    background-color: #669bbc;
+}
+
+#subtract:hover  {
+    background-color: #669bbc;
+}
+
+#equals:hover  {
+    background-color: #669bbc;
+}
+
+#divide:active {
+    background-color: #003049;
+}
+
+#multiply:active  {
+    background-color: #003049;
+}
+
+#add:active  {
+    background-color: #003049;
+}
+
+#subtract:active  {
+    background-color: #003049;
+}
+
+#equals:active  {
+    background-color: #003049;
+}
+
+.buttons:active {
+    background-color: #003049;
+    /* color: white; */
+    transition: none;
+}
 
 
 /* The screen */
