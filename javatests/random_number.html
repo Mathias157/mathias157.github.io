@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #randomNumber {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="../javatests/popup-box.css">
+</head>
+<body>
+    <div class="popup" onclick="myFunction()">Click me!
+        <span class="popuptext" id="myPopup">Popup text...</span>
+    </div>
+    <h1>Random Number Generator</h1>
+    <div id="randomNumber">Click the button to generate a random number</div>
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+
+    <script>
+        function generateRandomNumber() {
+            var randomNumber = Math.floor(Math.random() * 100) + 1;
+            if (randomNumber < 50) {
+                document.getElementById('randomNumber').innerText = randomNumber;
+            } else {
+                document.getElementById('randomNumber').innerText = "Oh no it's above 50..";
+            }
+        }
+        
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
