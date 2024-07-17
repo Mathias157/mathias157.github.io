@@ -15,3 +15,8 @@ a:hover {
     text-decoration-color: cadetblue;
     text-decoration-thickness: 1.3px;
 }
+
+div {
+    text-align: center; 
+    margin: 20px;
+}
