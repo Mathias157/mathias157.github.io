@@ -25,11 +25,21 @@
         }
     </style>
     <link rel="stylesheet" href="../javatests/popup-box.css">
+    <script src="../javatests/javatest.js"></script>
 </head>
 <body>
+    <h1>Other tests</h1>
     <div class="popup" onclick="myFunction()">Click me!
         <span class="popuptext" id="myPopup">Popup text...</span>
     </div>
+    <br>
+    <button onclick="receiving_response()">Receiving response from server</button>
+    <button onclick="sending_request()">Sending request to server</button>
+    <br>
+    <pre style="text-align: center">
+        Output
+        <code id="code-output"></code>
+    </pre>
     <h1>Random Number Generator</h1>
     <div id="randomNumber">Click the button to generate a random number</div>
     <button onclick="generateRandomNumber()">Generate Random Number</button>
