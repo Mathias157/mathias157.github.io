@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900&display=swap');
+
+body {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #F9EEFF;
+    font-family: "Work Sans", sans-serif;
+}
+
+.title  {
+    display: flex;
+    gap: 10px;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.question {
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease-out;
+}
+
+.answer.show {
+    visibility: visible;
+    opacity: 1;
+    max-height: 500px; /* Adjust as needed to fit content */
+    transition: max-height 0.5s ease, opacity 0.5s ease-in;
+}
+
+img {
+    transition: opacity 0.5s ease;
+    transition: transform 0.08s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 15%;
+        padding: 50px;
+    }
+}
+
+@media (min-width: 800px) {
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 10%;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
