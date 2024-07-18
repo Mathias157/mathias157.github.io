@@ -3,7 +3,6 @@
 body {
     background-image: url("./assets/images/background-pattern-desktop.svg");
     background-repeat: no-repeat;
-    background-size: 100%;
     background-color: #F9EEFF;
     font-family: "Work Sans", sans-serif;
 }
@@ -54,6 +53,10 @@ img:hover {
         margin-top: 15%;
         padding: 50px;
     }
+
+    body {
+        background-size: 250%;
+    }
 }
 
 @media (min-width: 800px) {
@@ -67,5 +70,9 @@ img:hover {
         padding-right: 100px;
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+
+    body {
+        background-size: 100%;
     }
 }
