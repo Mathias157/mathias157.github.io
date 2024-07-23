@@ -1,21 +1,13 @@
-// Get svg
-const svg1 = document.getElementById('mySVG')
+import anime from "https://cdn.skypack.dev/animejs@3.2.1";
 
-// Change clip path
-const clippath = svg1.getElementById("_clip1")
-const cliprect = clippath.querySelector('rect')
-cliprect.setAttribute('height', '360')
-cliprect.setAttribute('width', '2423')
-
-// Get content
-const curve1 = svg1.querySelector('path')
-
-// Scale content slightly
-gsap.set(curve1, {
-    xPercent: 0
-})
-
-gsap.to(curve1, {
-    scale: 1.5,
-    duration: 2
-})
+anime({
+  targets: ".container g path",
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: "linear",
+  duration: 3500,
+  delay: function (el, i) {
+    return i * 250;
+  },
+  direction: "alternate",
+  loop: false
+});
