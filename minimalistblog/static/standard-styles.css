@@ -1,0 +1,35 @@
+
+svg {
+    width: 100%;
+    /* // overflow: visible; */
+}
+
+g {
+    overflow: visible;
+    visibility: visible;
+}
+
+/* Hide all posts, let javascript reveal them in animation */
+#Posts > g > circle {
+    visibility: hidden;
+    transition: fill 0.5s ease;
+} 
+
+/* Using !important to override svg inline properties - necessary as svg otherwise overrides css stylings if defined */
+#Posts > g > circle:hover {
+    fill: #f07167 !important;
+}
+
+/* style="fill:rgb(63,177,255); */
+/* #Posts g  circle:hover {
+    fill: #0081a7;
+} */
+
+.reveal {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

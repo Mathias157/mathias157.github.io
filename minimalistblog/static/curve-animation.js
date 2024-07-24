@@ -1,5 +1,7 @@
 import anime from "https://cdn.skypack.dev/animejs@3.2.1";
 
+
+
 anime({
   targets: ".container g path",
   strokeDashoffset: [anime.setDashoffset, 0],
