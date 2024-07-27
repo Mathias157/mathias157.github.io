@@ -19,11 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
         post.addEventListener('mouseover', function() {
             gsap.to(post, {scale: $circle_init_scale + 0.7, duration: 0.3, transformOrigin: "center"});
+
+            // Make post information visible
+            const info_path = document.querySelector(`#Post${i} > g > path`)
+            const info_text = document.querySelector(`#Post${i} > g > text`)
+            info_path.style.opacity = 1;
+            info_text.style.opacity = 1;
         })
         
         post.addEventListener('mouseout', function() {
             gsap.to(post, {scale: $circle_init_scale, duration: 0.3, transformOrigin: "center"});
-            // gsap.to(post, {scale: 3.14/2, duration: 0.3, transformOrigin: "center", attr: {style : 'fill:#00afb9;'}});
+
+            // Make post information visible
+            const info_path = document.querySelector(`#Post${i} > g > path`)
+            const info_text = document.querySelector(`#Post${i} > g > text`)
+            info_path.style.opacity = 0;
+            info_text.style.opacity = 0;
         })
     }
 

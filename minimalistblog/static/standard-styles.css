@@ -10,14 +10,20 @@ g {
 }
 
 /* Hide all posts, let javascript reveal them in animation */
-#Posts > g > circle {
+#Posts > g > g > circle {
     visibility: hidden;
-    transition: fill 0.5s ease;
+    transition: fill 0.3s ease;
 } 
 
+
 /* Using !important to override svg inline properties - necessary as svg otherwise overrides css stylings if defined */
-#Posts > g > circle:hover {
+#Posts > g > g > circle:hover {
     fill: #f07167 !important;
+}
+#Posts > g > g > path,
+#Posts > g > g > text {
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 /* style="fill:rgb(63,177,255); */
