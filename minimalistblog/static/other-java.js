@@ -1,5 +1,24 @@
 var $circle_init_scale = 1.25;
 
+
+// Post 3 custom thumbnail animation (should be able to be automatised with Array.from(document.querySelectorAll('id_name')) if id_name contains all parts?)
+let post_part1 = document.querySelector('#Posts > #Post3 > #thumbnail #hvis_vinden');
+post_part1.style.opacity = 0;
+let post_part2 = document.querySelector('#Posts > #Post3 > #thumbnail #texture');
+post_part2.style.opacity = 0;
+let post_part3 = document.querySelector('#Posts > #Post3 > #thumbnail #vandrer_vider');
+post_part3.style.opacity = 0;
+let post3 = document.querySelector('#Post3 circle');
+// Set upper layer opacities to 1
+let post_thumbnail = document.querySelector('#Posts > #Post3 > #thumbnail');
+post_thumbnail.style.opacity = 1;
+
+let post3_animation = gsap.fromTo([post_part2, post_part1, post_part3],
+    {opacity: 0},
+    {opacity: 1, duration: 0.5, stagger: 0.1}
+);
+post3_animation.pause()
+
 // Wait for the SVG to load before applying effects
 document.addEventListener('DOMContentLoaded', function() {
     // Make all elements visible
@@ -45,34 +64,16 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         }
 
-        // Post 3 custom thumbnail animation (should be able to be automatised with Array.from(document.querySelectorAll('id_name')) if id_name contains all parts?)
-        let post_part1 = document.querySelector('#Posts > #Post3 > #thumbnail #hvis_vinden');
-        post_part1.style.opacity = 0;
-        let post_part2 = document.querySelector('#Posts > #Post3 > #thumbnail #texture');
-        post_part2.style.opacity = 0;
-        let post_part3 = document.querySelector('#Posts > #Post3 > #thumbnail #vandrer_vider');
-        post_part3.style.opacity = 0;
-        let post3 = document.querySelector('#Post3 circle');
-        // Set upper layer opacities to 1
-        let post_thumbnail = document.querySelector('#Posts > #Post3 > #thumbnail');
-        post_thumbnail.style.opacity = 1;
+    post3.addEventListener('mouseover', function() {
+        post3_animation.play();
         
-        post3.addEventListener('mouseover', function() {
-            gsap.fromTo([post_part2, post_part1, post_part3],
-                {opacity: 0},
-                {opacity: 1, duration: 0.5, stagger: 0.1}
-            )
-            
-        });
-        
-        post3.addEventListener('mouseout', function() {
-            // post_thumbnail.style.opacity = 0;
-            gsap.fromTo([post_part3, post_part1, post_part2],
-                {opacity: 1},
-                {opacity: 0, duration: 0.5, stagger: 0.1}
-            )
+    });
+    
+    post3.addEventListener('mouseout', function() {
+        // post_thumbnail.style.opacity = 0;
+        post3_animation.reverse();
 
-        });
+    });
 
     // Initial animation to make the posts appear with a staggered effect
     gsap.fromTo(posts, 
@@ -80,3 +81,5 @@ document.addEventListener('DOMContentLoaded', function() {
         { scale: $circle_init_scale, duration: 1, transformOrigin: "center", stagger: 0.5 }
     );
 })
+
+
