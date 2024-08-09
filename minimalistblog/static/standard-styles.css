@@ -26,6 +26,11 @@ g {
     transition: opacity 0.5s ease;
 }
 
+#Posts > g #thumbnail {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
 /* style="fill:rgb(63,177,255); */
 /* #Posts g  circle:hover {
     fill: #0081a7;
