@@ -1,6 +1,11 @@
 
+.tree_pot {
+    display: flex;
+    justify-content: center;
+}
+
 svg {
-    width: 100%;
+    width: 15%;
     overflow: visible;
 }
 
