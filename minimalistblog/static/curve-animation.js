@@ -18,11 +18,11 @@ anime.timeline() // Create a timeline for parallel animations
   targets: ".container g #Tree > #Branches path",  
   strokeDashoffset: [anime.setDashoffset, 0],
   easing: "linear",
-  duration: 300,
+  duration: 600,
   delay: function (el, i) {
     // delay in the animation between each target
     return i * 500 
   },
   direction: "alternate",
   loop: false,
-}, 300); // The start of the timeline delayed by 500 ms
+}, 100); // The start of the timeline delayed by 500 ms
