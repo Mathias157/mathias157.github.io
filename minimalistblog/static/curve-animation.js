@@ -15,13 +15,14 @@ anime.timeline() // Create a timeline for parallel animations
 }, 0) // The start of the timeline
 .add({
   // The order of the animations depend on the order of the Branches paths in the inline svg
-  targets: ".container g #Tree > #Branches path",
+  targets: ".container g #Tree > #Branches path",  
   strokeDashoffset: [anime.setDashoffset, 0],
   easing: "linear",
-  duration: 500,
+  duration: 300,
   delay: function (el, i) {
-    return i * 700 // delay in the animation between each target
+    // delay in the animation between each target
+    return i * 500 
   },
   direction: "alternate",
   loop: false,
-}, 500); // The start of the timeline delayed by 500 ms
+}, 300); // The start of the timeline delayed by 500 ms

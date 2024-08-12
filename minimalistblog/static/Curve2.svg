@@ -13,25 +13,31 @@
                 </g>
                 <g id="Branches">
                     <g id="Branch" transform="matrix(1,0,0,0.414058,167,568.527)">
-                        <path d="M159.265,122.065C159.265,122.065 176.441,133.347 167.212,152.104C157.983,170.861 134.669,156.728 124.469,171.08" style="fill:none;stroke:black;stroke-width:1px;"/>
+                        <path d="M76.59,99.416C76.59,99.416 120.369,89.748 105.747,69.033C96.421,55.822 82.044,47.662 95.255,33.285" style="fill:none;stroke:black;stroke-width:1px;"/>
                     </g>
                     <g id="Branch1" serif:id="Branch" transform="matrix(1,0,0,0.414058,167,568.527)">
+                        <path d="M159.265,122.065C159.265,122.065 176.441,133.347 167.212,152.104C157.983,170.861 134.669,156.728 124.469,171.08" style="fill:none;stroke:black;stroke-width:1px;"/>
+                    </g>
+                    <g id="Branch2" serif:id="Branch" transform="matrix(1,0,0,0.414058,167,568.527)">
+                        <path d="M315.49,116.167C315.49,116.167 327.737,98.929 314.914,78.723" style="fill:none;stroke:black;stroke-width:1px;"/>
+                    </g>
+                    <g id="Branch3" serif:id="Branch" transform="matrix(1,0,0,0.414058,167,568.527)">
                         <path d="M475,119C475,119 498.429,137.134 498.429,152.104" style="fill:none;stroke:black;stroke-width:1px;"/>
                     </g>
-                    <g id="Branch2" serif:id="Branch" transform="matrix(1,0,0,0.414058,166.925,568.424)">
+                    <g id="Branch4" serif:id="Branch" transform="matrix(1,0,0,0.414058,166.925,568.424)">
                         <path d="M685.031,130.421C685.031,130.421 713.208,118.54 711.5,96.076" style="fill:none;stroke:black;stroke-width:1px;"/>
                     </g>
                 </g>
             </g>
             <g id="Posts" transform="matrix(1,0,0,0.421012,0,353.186)">
-                <g id="Post1">
-                    <g id="Post11" serif:id="Post1" transform="matrix(1.55934,0,0,1.53358,133.603,543.258)">
+                <g id="Post1" transform="matrix(1,0,0,1,72.1022,-34.7761)">
+                    <g id="Post11" serif:id="Post1" transform="matrix(1.55934,0,0,1.53358,99.0199,511.845)">
                         <circle cx="58.787" cy="43.787" r="3.787" style="fill:rgb(0,129,167);"/>
                     </g>
-                    <g transform="matrix(1,0,0,0.983482,167,568.527)">
+                    <g transform="matrix(0.617776,0.773365,-0.786354,0.607572,186.547,507.721)">
                         <path d="M67,29L79,13" style="fill:none;stroke:black;stroke-width:1px;"/>
                     </g>
-                    <g transform="matrix(1,0,0,0.983482,162.304,515.449)">
+                    <g transform="matrix(1,0,0,0.983482,161.527,521.166)">
                         <g transform="matrix(12.5644,0,0,12.5644,132.883,60)">
                         </g>
                         <text x="70px" y="60px" style="font-family:'ArialMT', 'Arial';font-size:12.564px;">23.07.2024</text>
@@ -50,7 +56,7 @@
                         <text x="70px" y="60px" style="font-family:'ArialMT', 'Arial';font-size:12.564px;">15.03.2024</text>
                     </g>
                 </g>
-                <g id="Post3">
+                <g id="Post3" transform="matrix(1,0,0,1,-9.71434,-25.9865)">
                     <g id="Post31" serif:id="Post3" transform="matrix(1.55934,0,0,1.53358,400.236,547.91)">
                         <circle cx="58.787" cy="43.787" r="3.787" style="fill:rgb(0,129,167);"/>
                     </g>
@@ -62,7 +68,7 @@
                         </g>
                         <text x="70px" y="60px" style="font-family:'ArialMT', 'Arial';font-size:12.564px;">05.10.2023</text>
                     </g>
-                    <g id="thumbnail" transform="matrix(0.0461182,0,0,0.0453564,465.648,561.196)">
+                    <g id="thumbnail" transform="matrix(0.0375024,0,0,0.036883,480.912,580.57)">
                         <g transform="matrix(1,0,0,1,-1250,-1096)">
                             <clipPath id="_clip2">
                                 <rect x="0" y="0" width="2500" height="2192"/>
