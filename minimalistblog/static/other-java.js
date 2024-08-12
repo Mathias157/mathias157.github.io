@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial animation to make the posts appear with a staggered effect
     gsap.fromTo(posts, 
         { scale: 0, visibility: 'visible', transformOrigin: "center" }, 
-        { scale: $circle_init_scale, duration: 1, transformOrigin: "center", stagger: 0.5 }
+        { scale: $circle_init_scale, duration: 1, transformOrigin: "center", stagger: 0.5, delay: 0.5 }
     );
 })
 
