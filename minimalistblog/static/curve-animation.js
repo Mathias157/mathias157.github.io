@@ -3,7 +3,7 @@ import anime from "https://cdn.skypack.dev/animejs@3.2.1";
 
 anime.timeline() // Create a timeline for parallel animations
 .add({
-  targets: ".container g #Tree > #Treetrunk > path",
+  targets: "g #Tree > #Treetrunk > path",
   strokeDashoffset: [anime.setDashoffset, 0],
   easing: "linear",
   duration: 3000,
@@ -15,7 +15,7 @@ anime.timeline() // Create a timeline for parallel animations
 }, 0) // The start of the timeline
 .add({
   // The order of the animations depend on the order of the Branches paths in the inline svg
-  targets: ".container g #Tree > #Branches path",  
+  targets: "g #Tree > #Branches path",  
   strokeDashoffset: [anime.setDashoffset, 0],
   easing: "linear",
   duration: 600,

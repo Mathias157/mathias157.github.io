@@ -1,3 +1,7 @@
+/* Hide scrollbars */
+body {
+    overflow: hidden;
+}
 
 .tree_pot {
     display: flex;
@@ -5,8 +9,8 @@
 }
 
 svg {
-    width: 15%;
-    overflow: visible;
+    width: 50%;
+    overflow: hidden;
 }
 
 g {
@@ -48,4 +52,35 @@ g {
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+/* Scrolling */
+
+.scroll-container {
+    display: flex;
+    height: 100vh;
+    width: 300vw; /* 3 times the width of the viewport */
+    transition: transform 0.5s ease-in-out;
+}
+
+.section {
+    flex: 1 0 100vw; /* Each section takes up the full width of the viewport */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: rgb(0, 0, 0);
+}
+
+#section1 {
+    background-color: #ffffff;
+}
+
+#section2 {
+    background-color: #ffffff;
+}
+
+#section3 {
+    background-color: #ffffff;
 }
