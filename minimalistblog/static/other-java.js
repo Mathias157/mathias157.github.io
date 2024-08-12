@@ -74,12 +74,20 @@ document.addEventListener('DOMContentLoaded', function() {
         post3_animation.reverse();
 
     });
-
-    // Initial animation to make the posts appear with a staggered effect
-    gsap.fromTo(posts, 
-        { scale: 0, visibility: 'visible', transformOrigin: "center" }, 
-        { scale: $circle_init_scale, duration: 0.7, transformOrigin: "center", stagger: 0.5, delay: 0.7 }
-    );
+    
+    
+    // Initial animation to make the posts appear with a staggered effect when in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                gsap.fromTo(posts, 
+                    { scale: 0, visibility: 'visible', transformOrigin: "center" }, 
+                    { scale: $circle_init_scale, duration: 0.7, transformOrigin: "center", stagger: 0.5, delay: 0.7 }
+                );
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: '0px', threshold: 0 });
+    observer.observe(document.querySelector('#Posts'));
 })
-
 
