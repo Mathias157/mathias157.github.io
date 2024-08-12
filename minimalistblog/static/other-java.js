@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         posts.push(post);
         
         post.addEventListener('mouseover', function() {
-            gsap.to(post, {scale: $circle_init_scale + 0.7, duration: 0.3, transformOrigin: "center"});
+            gsap.to(post, {scale: $circle_init_scale + 0.4, duration: 0.3, transformOrigin: "center"});
             
             // Make post information visible
             const info_path = document.querySelector(`#Post${i} > g > path`)
