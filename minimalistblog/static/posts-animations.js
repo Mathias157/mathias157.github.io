@@ -2,7 +2,7 @@
 // The original scale of the fruit circles (posts)
 var $circle_init_scale = 1.25;
 
-// Post 3 custom thumbnail animation (should be able to be automatised with Array.from(document.querySelectorAll('id_name')) if id_name contains all parts?)
+// Post 3 custom thumbnail animation for PostTree1 (since it will grab the first instances, and ignore the once in PostTree2 and PostTree3)
 let post_part1 = document.querySelector('#Posts > #Post3 > #thumbnail #hvis_vinden');
 post_part1.style.opacity = 0;
 let post_part2 = document.querySelector('#Posts > #Post3 > #thumbnail #texture');
