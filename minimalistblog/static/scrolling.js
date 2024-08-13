@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, false);
     
     function handleGesture() {
-        const sensitivity = 20; // Adjust the sensitivity here
+        const sensitivity = 25; // Adjust the sensitivity here
         const deltaX = touchendX - touchstartX;
         const deltaY = touchendY - touchstartY;
 
