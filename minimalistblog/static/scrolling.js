@@ -2,11 +2,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section');
     window.currentSection = 0;
 
+    // Play all animations before any scrolling, to ensure that desktop users see it too
+    for (i = 0; i <= 2; i++) {
+        window.fruit_animations[i].play();
+        window.post_tree_animations[i].play();
+    }
+
     // Function to scroll to the correct section
     function scrollToSection(sectionIndex) {
+        // Play animations, and include delay in restart
+        window.fruit_animations[window.currentSection].restart(true);
+        window.post_tree_animations[window.currentSection].restart();
+        
+        // Scroll
         const scrollContainer = document.querySelector('.scroll-container');
         const offset = sectionIndex * -100; // Calculate offset based on section index
         scrollContainer.style.transform = `translateX(${offset}vw)`;
+
     }
 
     // Function to handle key press events

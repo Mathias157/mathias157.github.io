@@ -21,7 +21,7 @@ let post3_animation = gsap.fromTo([post_part2, post_part1, post_part3],
 post3_animation.pause()
 
 // List to store fruit animations (posts)
-let fruit_animations = [];
+window.fruit_animations = [];
 
 // Wait for the SVG to load before applying effects
 document.addEventListener('DOMContentLoaded', function() {
@@ -83,24 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         
         // Animation to make the posts appear with a staggered effect
-        let fruit_animation = gsap.timeline();
-        fruit_animation.add(gsap.fromTo(posts, 
+        let fruit_animation = gsap.fromTo(posts, 
                     { scale: 0, visibility: 'visible', transformOrigin: "center"}, 
-                    { scale: $circle_init_scale, duration: 0.7, transformOrigin: "center", stagger: 0.5, delay: 0.7, paused: false }
-                ));
-        fruit_animations.push(fruit_animation)
-        
-        // Start the animations when in view
-        let observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // fruit_animations[i].paused = false; 
-                    fruit_animations[i-1].restart();
-                    window.post_tree_animations[i-1].restart();
-                }
-            });
-        }, { rootMargin: '0px', threshold: 0 });
-        observer.observe(document.querySelector(`#PostTree${i} #Posts`));
+                    { scale: $circle_init_scale, duration: 0.7, transformOrigin: "center", stagger: 0.5, delay: 0.7, paused: true}
+                );
+        window.fruit_animations.push(fruit_animation)
     }
 });
 
