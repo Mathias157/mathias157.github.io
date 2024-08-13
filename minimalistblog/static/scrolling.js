@@ -35,21 +35,25 @@ document.addEventListener('DOMContentLoaded', function() {
         handleGesture();
     }, false);
     
-    
     function handleGesture() {
-        if (touchendX < touchstartX) {
-            if (window.currentSection < sections.length - 1) {
-                window.currentSection++;
-                scrollToSection(window.currentSection);
+        const sensitivity = 20; // Adjust the sensitivity here
+        const deltaX = touchendX - touchstartX;
+        const deltaY = touchendY - touchstartY;
+
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            if (deltaX < -sensitivity) {
+                if (window.currentSection < sections.length - 1) {
+                    window.currentSection++;
+                    scrollToSection(window.currentSection);
+                }
+            } else if (deltaX > sensitivity) {
+                if (window.currentSection > 0) {
+                    window.currentSection--;
+                    scrollToSection(window.currentSection);
+                }
             }
         }
-    
-        if (touchendX > touchstartX) {
-            if (window.currentSection > 0) {
-                window.currentSection--;
-                scrollToSection(window.currentSection);
-            }
-        }
+    }
     
         // if (touchendY < touchstartY) {
         //     console.log('Swiped Up');
@@ -62,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // if (touchendY === touchstartY) {
         //     console.log('Tap');
         // }
-    }
+    // }
 
 
     // Add event listener for arrow key presses
