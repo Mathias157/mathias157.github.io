@@ -1,6 +1,9 @@
+// Remove the unused import statement
+// import { timeline } from './curve-animation.js';
+
 var $circle_init_scale = 1.25;
 
-
+// Rest of your code...
 // Post 3 custom thumbnail animation (should be able to be automatised with Array.from(document.querySelectorAll('id_name')) if id_name contains all parts?)
 let post_part1 = document.querySelector('#Posts > #Post3 > #thumbnail #hvis_vinden');
 post_part1.style.opacity = 0;
@@ -75,11 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
     
+    // timeline.play();
     
     // Initial animation to make the posts appear with a staggered effect when in view
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
+                window.tree1timeline.play();
                 gsap.fromTo(posts, 
                     { scale: 0, visibility: 'visible', transformOrigin: "center" }, 
                     { scale: $circle_init_scale, duration: 0.7, transformOrigin: "center", stagger: 0.5, delay: 0.7 }

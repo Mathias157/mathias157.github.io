@@ -1,9 +1,9 @@
 import anime from "https://cdn.skypack.dev/animejs@3.2.1";
 
 // Create a timeline for parallel animations
-const timeline = anime.timeline({ autoplay: false });
+window.tree1timeline = anime.timeline({ autoplay: false });
 
-timeline
+window.tree1timeline
   .add({
     targets: "g #Tree > #Treetrunk > path",
     strokeDashoffset: [anime.setDashoffset, 0],
@@ -29,35 +29,35 @@ timeline
     loop: false,
   }, 100); // The start of the timeline delayed by 500 ms
 
-// Function to check if a section is in the viewport
-function isSectionInView(section) {
-  const rect = section.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-  );
-}
+// // Function to check if a section is in the viewport
+// function isSectionInView(section) {
+//   const rect = section.getBoundingClientRect();
+//   return (
+//     rect.top >= 0 &&
+//     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+//   );
+// }
 
-// Function to play the animation when a section is in view
-function playAnimationIfInView(section) {
-  if (isSectionInView(section)) {
-    timeline.play();
-  } else {
-    timeline.pause();
-  }
-}
+// // Function to play the animation when a section is in view
+// function playAnimationIfInView(section) {
+//   if (isSectionInView(section)) {
+//     timeline.play();
+//   } else {
+//     timeline.pause();
+//   }
+// }
 
-// Get the section element
-const section = document.querySelector(".tree_pot");
+// // Get the section element
+// const section = document.querySelector(".tree_pot");
 
-// Create an Intersection Observer instance
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      playAnimationIfInView(entry.target);
-    }
-  });
-});
+// // Create an Intersection Observer instance
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       playAnimationIfInView(entry.target);
+//     }
+//   });
+// });
 
-// Observe the section element
-observer.observe(section);
+// // Observe the section element
+// observer.observe(section);

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section');
-    let currentSection = 0;
+    window.currentSection = 0;
 
     // Function to scroll to the correct section
     function scrollToSection(sectionIndex) {
@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to handle key press events
     function handleKeyPress(event) {
         if (event.key === 'ArrowRight') {
-            if (currentSection < sections.length - 1) {
-                currentSection++;
-                scrollToSection(currentSection);
+            if (window.currentSection < sections.length - 1) {
+                window.currentSection++;
+                scrollToSection(window.currentSection);
             }
         } else if (event.key === 'ArrowLeft') {
-            if (currentSection > 0) {
-                currentSection--;
-                scrollToSection(currentSection);
+            if (window.currentSection > 0) {
+                window.currentSection--;
+                scrollToSection(window.currentSection);
             }
         }
     }
@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleWheelScroll(event) {
         const delta = Math.sign(event.deltaY);
         if (delta > 0) {
-            if (currentSection < sections.length - 1) {
-                currentSection++;
-                scrollToSection(currentSection);
+            if (window.currentSection < sections.length - 1) {
+                window.currentSection++;
+                scrollToSection(window.currentSection);
             }
         } else if (delta < 0) {
-            if (currentSection > 0) {
-                currentSection--;
-                scrollToSection(currentSection);
+            if (window.currentSection > 0) {
+                window.currentSection--;
+                scrollToSection(window.currentSection);
             }
         }
     }
