@@ -23,15 +23,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to handle key press events
     function handleKeyPress(event) {
-        if (event.key === 'ArrowRight') {
-            if (window.currentSection < sections.length - 1) {
-                window.currentSection++;
-                scrollToSection(window.currentSection);
-            }
-        } else if (event.key === 'ArrowLeft') {
-            if (window.currentSection > 0) {
-                window.currentSection--;
-                scrollToSection(window.currentSection);
+        if (window.innerWidth <= 750) {
+            if (event.key === 'ArrowRight') {
+                if (window.currentSection < sections.length - 1) {
+                    window.currentSection++;
+                    scrollToSection(window.currentSection);
+                }
+            } else if (event.key === 'ArrowLeft') {
+                if (window.currentSection > 0) {
+                    window.currentSection--;
+                    scrollToSection(window.currentSection);
+                }
             }
         }
     }
