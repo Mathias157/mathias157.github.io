@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section');
     window.currentSection = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
 
     // Function to scroll to the correct section
     function scrollToSection(sectionIndex) {
