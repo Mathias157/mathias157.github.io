@@ -1,7 +1,13 @@
 /* Hide scrollbars */
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 .tree_pot {
     display: flex;
     width: 100%;
@@ -61,7 +67,7 @@ g {
     display: flex;
     height: 100vh;
     transition: transform 0.5s ease-in-out;
-    transform: translateY(-145px);
+    /* transform: translateY(-145px); */
 }
 
 .section {
