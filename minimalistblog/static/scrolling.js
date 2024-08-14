@@ -21,7 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    // Function to handle key press events
+    // Add event listener to window innerWidth
+    window.addEventListener('resize', function() {
+        // Handle window resize event
+        // You can add your code here to handle the resize event
+        if (window.innerWidth > 750) {
+            window.currentSection = 0;
+            scrollToSection(0)
+        }
+    });
+
+    // Change section with arrowkeys
     function handleKeyPress(event) {
         if (window.innerWidth <= 750) {
             if (event.key === 'ArrowRight') {
@@ -38,6 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Add event listener for arrow key presses
+    document.addEventListener('keydown', handleKeyPress);
+
+    // Change section with touch
     document.addEventListener('touchstart', function (event) {
         touchstartX = event.changedTouches[0].screenX;
         touchstartY = event.changedTouches[0].screenY;
@@ -68,21 +82,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
-        // if (touchendY < touchstartY) {
-        //     console.log('Swiped Up');
-        // }
-    
-        // if (touchendY > touchstartY) {
-        //     console.log('Swiped Down');
-        // }
-    
-        // if (touchendY === touchstartY) {
-        //     console.log('Tap');
-        // }
-    // }
-
-
-    // Add event listener for arrow key presses
-    document.addEventListener('keydown', handleKeyPress);
 });
