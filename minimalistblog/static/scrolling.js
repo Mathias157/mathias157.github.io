@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollContainer = document.querySelector('.scroll-container');
         const offset = sectionIndex * -100; // Calculate offset based on section index
         scrollContainer.style.transform = `translateX(${offset}vw)`;
-
+        // window.scrollTo(0, document.body.scrollHeight, behaviour='smooth');
+        window.scroll({top: document.body.scrollHeight,  behavior: 'smooth'});
     }
 
     // Add event listener to window innerWidth
