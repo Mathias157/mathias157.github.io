@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Futura';
+    src: local('Futura'),
+         url('./futura/Futura\ Std\ Book.ttf') format("truetype");
+  }  
+
 /* Hide scrollbars */
 body {
     overflow-x: hidden;
