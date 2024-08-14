@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 578 1093" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-810.418,0)">
+        <g id="PostTree2" transform="matrix(0.406019,0,0,11.671,742.613,-6635.25)">
+            <rect x="167" y="568.527" width="1423" height="93.577" style="fill:none;"/>
+            <g id="Tree" transform="matrix(1.50812e-16,-0.0856828,5.9483,1.26711e-17,-2764.23,670.024)">
+                <g id="Treetrunk" transform="matrix(1,0,0,0.414058,0,357.358)">
+                    <path d="M167,620.079C167,620.079 270.995,595.521 308,620.079C313.474,623.711 318.985,627.391 324.574,630.983C356.771,651.676 391.581,669.495 437,659C490.304,646.683 485.038,589.047 527,602C556.463,611.095 596.969,634.221 611.656,615.956C626.319,597.721 631.107,474.85 568.997,473.309C542.5,472.652 587.586,511.482 609.783,482.332C620.17,468.692 647.479,439.545 671.758,477.988C696.038,516.431 705.097,668.134 707.301,682.55C709.935,699.786 719.093,733.425 699.135,741.108" style="fill:none;stroke:black;stroke-width:1px;"/>
+                </g>
+                <g id="Branches">
+                    <g id="Branch1" transform="matrix(1,0,0,0.414058,167,568.527)">
+                        <path d="M76.59,99.416C76.59,99.416 120.369,89.748 105.747,69.033C96.421,55.822 82.044,47.662 95.255,33.285" style="fill:none;stroke:black;stroke-width:1px;"/>
+                    </g>
+                    <g id="Branch2" transform="matrix(1,0,0,0.414058,167,568.527)">
+                        <path d="M159.265,122.065C159.265,122.065 176.441,133.347 167.212,152.104C157.983,170.861 134.669,156.728 124.469,171.08" style="fill:none;stroke:black;stroke-width:1px;"/>
+                    </g>
+                    <g id="Branch3" transform="matrix(1,0,0,0.414058,167,568.527)">
+                        <path d="M315.49,116.167C315.49,116.167 327.737,98.929 314.914,78.723" style="fill:none;stroke:black;stroke-width:1px;"/>
+                    </g>
+                    <g id="Branch4" transform="matrix(0.982814,-0.0764335,0.184596,0.406942,85.827,601.655)">
+                        <path d="M475,119C475,119 489.211,125.152 485.505,146.383C482.931,161.13 482.107,162.979 496.099,171.784" style="fill:none;stroke:black;stroke-width:1px;"/>
+                    </g>
+                    <g id="Branch5" transform="matrix(0.97689,-0.0885026,0.213745,0.404489,-68.0447,557.308)">
+                        <path d="M685.031,130.421C685.031,130.421 713.208,118.54 711.5,96.076" style="fill:none;stroke:black;stroke-width:1px;"/>
+                    </g>
+                </g>
+            </g>
+            <g id="Posts" transform="matrix(1.50812e-16,-0.0856828,2.50431,5.33468e-18,-663.377,670.024)">
+                <g id="Post1" transform="matrix(1,0,0,1,72.1022,-34.7761)">
+                    <g id="Post11" serif:id="Post1" transform="matrix(3.89835,-2.40254e-33,1.85878e-31,3.83396,-38.484,411.118)">
+                        <circle cx="58.787" cy="43.787" r="3.787" style="fill:rgb(0,129,167);"/>
+                    </g>
+                    <g transform="matrix(6.12323e-17,0.983482,-1,6.02209e-17,243.118,406.758)">
+                        <text x="58.574px" y="60px" style="font-family:'Garamond';font-size:12.564px;">Sw<tspan x="72.801px 78.034px " y="60px 60px ">ed</tspan>ish Scenes</text>
+                        <g transform="matrix(12.5644,0,0,12.5644,122.613,85.1288)">
+                        </g>
+                        <text x="70px" y="85.129px" style="font-family:'Garamond';font-size:12.564px;">12.04.2023</text>
+                    </g>
+                </g>
+                <g id="Post2" transform="matrix(1,0,0,1,-56.4617,44.9742)">
+                    <g id="Post21" serif:id="Post2" transform="matrix(3.89835,-2.40254e-33,1.85878e-31,3.83396,118.757,466.887)">
+                        <circle cx="58.787" cy="43.787" r="3.787" style="fill:rgb(0,129,167);"/>
+                    </g>
+                    <g transform="matrix(6.12323e-17,0.983482,-1,6.02209e-17,377.508,603.147)">
+                        <text x="70px" y="60px" style="font-family:'Garamond';font-size:12.564px;">Nils F<tspan x="100.067px 104.258px " y="60px 60px ">ra</tspan>hm J<tspan x="132.405px 137.509px " y="60px 60px ">am</tspan></text>
+                        <g transform="matrix(12.5644,0,0,12.5644,134.905,85.1288)">
+                        </g>
+                        <text x="82.291px" y="85.129px" style="font-family:'Garamond';font-size:12.564px;">22.01.2020</text>
+                    </g>
+                </g>
+                <g id="Post3" transform="matrix(1,0,0,1,-9.71434,-25.9865)">
+                    <g id="Post31" serif:id="Post3" transform="matrix(3.89835,-2.40254e-33,1.85878e-31,3.83396,262.732,447.183)">
+                        <circle cx="58.787" cy="43.787" r="3.787" style="fill:rgb(0,129,167);"/>
+                    </g>
+                    <g transform="matrix(6.12323e-17,0.983482,-1,6.02209e-17,520.202,432.823)">
+                        <text x="62.253px" y="60px" style="font-family:'Garamond';font-size:12.564px;">Soft Piano Co<tspan x="130.781px 136.431px 141.664px " y="60px 60px 60px ">ver</tspan></text>
+                        <text x="56.633px" y="72.564px" style="font-family:'Garamond';font-size:12.564px;">Gone W<tspan x="98.087px 102.278px " y="72.564px 72.564px ">ro</tspan>ng pt. II:</text>
+                        <text x="22.655px" y="85.129px" style="font-family:'Garamond';font-size:12.564px;">&quot;Spur<tspan x="51.023px 56.673px 61.906px " y="85.129px 85.129px 85.129px ">ven</tspan> Sidder Stum bag K<tspan x="163.336px 169.225px " y="85.129px 85.129px ">vi</tspan>st&quot;</text>
+                        <g transform="matrix(12.5644,0,0,12.5644,130.36,110.258)">
+                        </g>
+                        <text x="77.747px" y="110.258px" style="font-family:'Garamond';font-size:12.564px;">21.01.2023</text>
+                    </g>
+                </g>
+                <g id="Post4" transform="matrix(1,0,0,1,-58.8373,5.38682)">
+                    <g id="Post41" serif:id="Post4" transform="matrix(3.89835,-2.40254e-33,1.85878e-31,3.83396,436.256,493.198)">
+                        <circle cx="58.787" cy="43.787" r="3.787" style="fill:rgb(0,129,167);"/>
+                    </g>
+                    <g transform="matrix(6.12323e-17,0.983482,-1,6.02209e-17,712.06,631.987)">
+                        <text x="70px" y="60px" style="font-family:'Garamond';font-size:12.564px;">P<tspan x="76.681px 81.785px 86.227px 89.89px " y="60px 60px 60px 60px ">arti</tspan>al Eclipse</text>
+                        <text x="79.81px" y="72.564px" style="font-family:'Garamond';font-size:12.564px;">Timelapse</text>
+                        <g transform="matrix(12.5644,0,0,12.5644,130.982,97.6933)">
+                        </g>
+                        <text x="78.368px" y="97.693px" style="font-family:'Garamond';font-size:12.564px;">10.06.2021</text>
+                    </g>
+                </g>
+                <g id="Post5" transform="matrix(1,0,0,1,-274.33,-225.31)">
+                    <g id="Post51" serif:id="Post5" transform="matrix(3.89835,-2.40254e-33,1.85878e-31,3.83396,691.865,483.477)">
+                        <circle cx="58.787" cy="43.787" r="3.787" style="fill:rgb(0,129,167);"/>
+                    </g>
+                    <g transform="matrix(6.12323e-17,0.983482,-1,6.02209e-17,1065.62,514.937)">
+                        <text x="70px" y="60px" style="font-family:'Garamond';font-size:12.564px;">Light and Darkness</text>
+                        <text x="76.206px" y="72.564px" style="font-family:'Garamond';font-size:12.564px;">3D Landscape w<tspan x="156.58px " y="72.564px ">.</tspan></text>
+                        <text x="91.399px" y="85.129px" style="font-family:'Garamond';font-size:12.564px;">Piano Beat</text>
+                        <g transform="matrix(12.5644,0,0,12.5644,144.074,110.258)">
+                        </g>
+                        <text x="91.46px" y="110.258px" style="font-family:'Garamond';font-size:12.564px;">28.01.2024</text>
+                    </g>
+                </g>
+                <g id="Post6" transform="matrix(1,0,0,1,-234.591,210.008)">
+                    <g id="Post61" serif:id="Post6" transform="matrix(3.89835,-2.40254e-33,1.85878e-31,3.83396,704.553,360.889)">
+                        <circle cx="58.787" cy="43.787" r="3.787" style="fill:rgb(0,129,167);"/>
+                    </g>
+                    <g transform="matrix(6.12323e-17,0.983482,-1,6.02209e-17,1035.08,460.675)">
+                        <text x="100.497px" y="60px" style="font-family:'Garamond';font-size:12.564px;">Contrasting Guitarsoli</text>
+                        <text x="111.095px" y="72.564px" style="font-family:'Garamond';font-size:12.564px;">in 3D Landscapes</text>
+                        <g transform="matrix(12.5644,0,0,12.5644,181.046,97.6933)">
+                        </g>
+                        <text x="128.433px" y="97.693px" style="font-family:'Garamond';font-size:12.564px;">28.05.2024</text>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(2.46294,0,0,0.0856828,114.163,570.096)">
+                <g transform="matrix(50,0,0,50,368.51,1059.33)">
+                </g>
+                <text x="252.16px" y="1059.33px" style="font-family:'FuturaPT-Book', 'Futura PT';font-size:50px;">Music</text>
+            </g>
+        </g>
+    </g>
+</svg>
