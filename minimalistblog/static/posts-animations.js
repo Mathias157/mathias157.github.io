@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Show viewbutton if on small width device (note: Now it only shows the rounded rectangle!)
                 if (window.innerWidth < 750) {
                     post_viewbutton.style.opacity = 1;
+                    post_viewbutton.addEventListener('click', function() {
+                        openPost(i, j)
+                })
                 }
             })
             
@@ -59,10 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     post_viewbutton.style.opacity = 0;
                 }
             })
-
+            
             // Click
             post_circle.addEventListener('click', function() {
-
+                if (window.innerWidth >= 750) {
+                    openPost(i,j)
+                }
             })
         }
 
@@ -77,8 +82,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+// Closing and opening posts
+function openPost(tree, post) {
+    let post_content = document.querySelector(`#Post${tree}${post}Content`)
+    post_content.style.visibility = 'visible';
+    post_content.style.opacity = 1;
+    
+    post_content.querySelector('button').addEventListener('click', function() {
+        closePost(tree, post)
+    })
+}
 
-
-function getViewButton(number) {
-
+function closePost(tree, post) {
+    let post_content = document.querySelector(`#Post${tree}${post}Content`)
+    post_content.style.opacity = 0;
+    setTimeout(function() {
+        post_content.style.visibility = 'hidden';
+    }, 500);
 }

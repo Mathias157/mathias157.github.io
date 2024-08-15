@@ -1,17 +1,17 @@
-// Prevent the browser from restoring the scroll position on page reload
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-}
-
-// Scroll down the page on load
-window.addEventListener('load', function() {
-    window.scrollTo(0, document.body.scrollHeight);
-});
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Prevent the browser from restoring the scroll position on page reload
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    
+    // Scroll down the page on load
+    window.addEventListener('load', function() {
+        window.scrollTo(0, document.body.scrollHeight);
+    });
+    
     const sections = document.querySelectorAll('.section');
     window.currentSection = 0;
-    
 
     // Play all animations before any scrolling, to ensure that desktop users see it too
     for (i = 0; i <= 2; i++) {
