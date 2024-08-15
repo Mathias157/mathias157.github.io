@@ -17,17 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // console.log(document.querySelectorAll(`#PostTree${i} #Posts > g`))
         for (let j = 1; j <= N_posts; j++) {
             let post = document.querySelector(`#PostTree${i} #Post${j}`);
-            
-            // Hide post text
-            let post_text = post.querySelectorAll('text');
-            post_text.forEach(text_element => {
-                text_element.style.display = 'none';
-            }) 
 
             // Hide viewbuttons, if they exist
             let post_viewbutton = post.querySelector(`#ViewButton${j}`);
             if (post_viewbutton) {
-                post_viewbutton.style.visibility = 'hidden';
+                post_viewbutton.style.opacity = 0;
             }
 
             let post_circle = post.querySelector(`circle`);
@@ -41,17 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Make post information visible
                 let info_text = document.querySelectorAll(`#PostTree${i} #Post${j} > g > text`)
                 info_text.forEach(element => {
-                    element.style.display = 'block'
-                    // Small delay, so the change in display does not cause 'blink' but fades
-                    setTimeout(() => {
-                        element.style.opacity = 1;
-                    }, 10)
+                    element.style.opacity = 1;
                 });
 
                 // Show viewbutton if on small width device (note: Now it only shows the rounded rectangle!)
-                // if (window.innerWidth < 750) {
-                //     post_viewbutton.style.visibility = 'visible';
-                // }
+                if (window.innerWidth < 750) {
+                    post_viewbutton.style.opacity = 1;
+                }
             })
             
             // Hover out
@@ -62,11 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 let info_text = document.querySelectorAll(`#PostTree${i} #Post${j} > g > text`)
                 info_text.forEach(element => {
                     element.style.opacity = 0;
-                    // Delay proportional to fade time, so the fade finishes before making display none
-                    setTimeout(() => {
-                        element.style.display = 'none'
-                    }, 500)
                 });
+
+                // Fade viewbutton away with small width device
+                if (window.innerWidth < 750) {
+                    post_viewbutton.style.opacity = 0;
+                }
             })
 
             // Click

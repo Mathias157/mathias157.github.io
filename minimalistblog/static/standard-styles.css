@@ -43,6 +43,11 @@ svg {
     transition: opacity 0.5s ease;
 }
 
+/* Setting transition of all id's that contain ViewButton */
+[id^="ViewButton"] {
+    transition: opacity 0.5s ease;
+}
+
 #Posts > g #thumbnail {
     opacity: 0;
     transition: opacity 0.5s ease;
