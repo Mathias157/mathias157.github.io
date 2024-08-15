@@ -8,52 +8,76 @@ window.fruit_animations = [];
 
 // Wait for the SVG to load before applying effects
 document.addEventListener('DOMContentLoaded', function() {
-    // Make all elements visible
-    const all_elements = Array.from(document.querySelectorAll('g'));
-    all_elements.forEach(element => {
-        element.style.visibility = 'visible';
-    })
 
     // Add hover effect to all elements with IDs in the form Post1, Post2, ..., PostN
-    // ..except for Post 3, where we have a custom thumbnail
-    // const posts = document.querySelector('#Posts')
     for (let i = 1; i <= 3; i++) {
         
-        const posts = [];
+        const post_circles = [];
         let N_posts = document.querySelectorAll(`#PostTree${i} #Posts > g`).length;
-        console.log(document.querySelectorAll(`#PostTree${i} #Posts > g`))
+        // console.log(document.querySelectorAll(`#PostTree${i} #Posts > g`))
         for (let j = 1; j <= N_posts; j++) {
-            let post = document.querySelector(`#PostTree${i} #Post${j} circle`);
+            let post = document.querySelector(`#PostTree${i} #Post${j}`);
             
-            post.style.visibility = 'visible';
-            posts.push(post);
+            // Hide post text
+            let post_text = post.querySelectorAll('text');
+            post_text.forEach(text_element => {
+                text_element.style.display = 'none';
+            }) 
+
+            // Hide viewbuttons, if they exist
+            let post_viewbutton = post.querySelector(`#ViewButton${j}`);
+            if (post_viewbutton) {
+                post_viewbutton.style.visibility = 'hidden';
+            }
+
+            let post_circle = post.querySelector(`circle`);
             
-            post.addEventListener('mouseover', function() {
-                gsap.to(post, {scale: $circle_init_scale + 0.4, duration: 0.3, transformOrigin: "center"});
+            post_circles.push(post_circle);
+            
+            // Hovering animation
+            post_circle.addEventListener('mouseover', function() {
+                gsap.to(post_circle, {scale: $circle_init_scale + 0.4, duration: 0.3, transformOrigin: "center"});
                 
                 // Make post information visible
                 let info_text = document.querySelectorAll(`#PostTree${i} #Post${j} > g > text`)
                 info_text.forEach(element => {
-                    // console.log(`Making text visible for PostTree${i} Post${j}`);
-                    element.style.opacity = 1;
+                    element.style.display = 'block'
+                    // Small delay, so the change in display does not cause 'blink' but fades
+                    setTimeout(() => {
+                        element.style.opacity = 1;
+                    }, 10)
                 });
+
+                // Show viewbutton if on small width device (note: Now it only shows the rounded rectangle!)
+                // if (window.innerWidth < 750) {
+                //     post_viewbutton.style.visibility = 'visible';
+                // }
             })
             
-            post.addEventListener('mouseout', function() {
-                gsap.to(post, {scale: $circle_init_scale, duration: 0.3, transformOrigin: "center"});
+            // Hover out
+            post_circle.addEventListener('mouseout', function() {
+                gsap.to(post_circle, {scale: $circle_init_scale, duration: 0.3, transformOrigin: "center"});
                 
                 // Make post information invisible
                 let info_text = document.querySelectorAll(`#PostTree${i} #Post${j} > g > text`)
                 info_text.forEach(element => {
-                    // console.log(`Making text visible for PostTree${i} Post${j}`);
                     element.style.opacity = 0;
+                    // Delay proportional to fade time, so the fade finishes before making display none
+                    setTimeout(() => {
+                        element.style.display = 'none'
+                    }, 500)
                 });
+            })
+
+            // Click
+            post_circle.addEventListener('click', function() {
+
             })
         }
 
         
         // Animation to make the posts appear with a staggered effect
-        let fruit_animation = gsap.fromTo(posts, 
+        let fruit_animation = gsap.fromTo(post_circles, 
                     { scale: 0, visibility: 'visible', transformOrigin: "center"}, 
                     { scale: $circle_init_scale, duration: 0.7, transformOrigin: "center", stagger: 0.5, delay: 0.7, paused: true}
                 );
@@ -63,3 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+function getViewButton(number) {
+
+}

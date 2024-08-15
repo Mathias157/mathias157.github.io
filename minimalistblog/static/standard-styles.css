@@ -26,11 +26,6 @@ svg {
     overflow: hidden;
 }
 
-g {
-    overflow: visible;
-    visibility: hidden;
-}
-
 /* Hide all posts, let javascript reveal them in animation */
 #Posts > g > g > circle {
     visibility: hidden;
