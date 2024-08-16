@@ -22,6 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
             let post_viewbutton = post.querySelector(`#ViewButton${j}`);
             if (post_viewbutton) {
                 post_viewbutton.style.opacity = 0;
+                post_viewbutton.addEventListener('click', function() {
+                    if (post_viewbutton.style.opacity == 1) {
+                        openPost(i, j)
+                    }
+                });
             }
 
             let post_circle = post.querySelector(`circle`);
@@ -41,9 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Show viewbutton if on small width device (note: Now it only shows the rounded rectangle!)
                 if (window.innerWidth < 750) {
                     post_viewbutton.style.opacity = 1;
-                    post_viewbutton.addEventListener('click', function() {
-                        openPost(i, j)
-                })
                 }
             })
             
