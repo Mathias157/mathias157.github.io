@@ -123,16 +123,6 @@ svg {
     box-sizing: border-box;
 }
 
-.popup .popup-content {
-    display: flex;
-    justify-content: center;
-    width: 33%;
-    padding-top: 5%;
-    margin-left: 33%;
-    margin-right: 33%;
-    /* overflow-wrap: inherit; */
-    /* height: 25%; */
-}
 
 .popup button {
     /* width: 100px;
@@ -176,6 +166,21 @@ svg {
     }
     .scroll-container {
         width: 100vw; /* 100% viewport */
+    }
+
+        
+    .popup .popup-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 80%;
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        /* margin-left: 25%;
+        margin-right: 25%; */
+        /* overflow-wrap: inherit; */
+        /* height: 25%; */
     }
 
 
