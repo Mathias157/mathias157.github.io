@@ -23,9 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (post_viewbutton) {
                 post_viewbutton.style.opacity = 0;
                 post_viewbutton.addEventListener('click', function() {
-                    if (post_viewbutton.style.opacity == 1) {
-                        openPost(i, j)
-                    }
+                    openPost(i, j)
                 });
             }
 
@@ -58,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 info_text.forEach(element => {
                     element.style.opacity = 0;
                 });
-
+                
                 // Fade viewbutton away with small width device
                 if (window.innerWidth < 750) {
                     post_viewbutton.style.opacity = 0;
