@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Scroll down the page on load
-    window.addEventListener('load', function() {
-        window.scrollTo(0, document.body.scrollHeight);
-    });
+    window.scrollTo(0, document.body.scrollHeight);
     
     const sections = document.querySelectorAll('.section');
     window.currentSection = 0;
