@@ -65,9 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Click
             post_circle.addEventListener('click', function() {
-                if (window.innerWidth >= 750) {
-                    openPost(i,j)
-                }
+                // if (window.innerWidth >= 750) {
+                openPost(i,j)
+                // }
             })
         }
 
@@ -96,7 +96,42 @@ function openPost(tree, post) {
 function closePost(tree, post) {
     let post_content = document.querySelector(`#Post${tree}${post}Content`)
     post_content.style.opacity = 0;
+    player.pauseVideo();
     setTimeout(function() {
         post_content.style.visibility = 'hidden';
     }, 500);
+}
+
+
+
+
+// Load the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// Create a YouTube player variable
+var player;
+
+// This function creates an <iframe> (and YouTube player) after the API code downloads.
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtubePlayer', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+// The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+    // You can use player.pauseVideo() to pause the video
+    // Example: event.target.pauseVideo();
+}
+
+// Function to pause the video
+function pauseVideo() {
+    if (player && player.pauseVideo) {
+        player.pauseVideo();
+    }
 }
