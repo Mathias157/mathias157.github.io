@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Click
             post_circle.addEventListener('click', function() {
-                // if (window.innerWidth >= 750) {
-                openPost(i,j)
-                // }
+                if (window.innerWidth >= 750) {
+                    openPost(i,j)
+                }
             })
         }
 
@@ -101,15 +101,24 @@ function openPost(tree, post) {
 function closePost(tree, post) {
     let post_content = document.querySelector(`#Post${tree}${post}Content`)
     post_content.style.opacity = 0;
-    pauseVideo(`YT${tree}${post}`);
-    setTimeout(function() {
+
+    // This doesn't work for some reason (also tried with a timeout)
+    post_content.addEventListener('transitionend', function handleTransitionEnd() {
         post_content.style.visibility = 'hidden';
-    }, 500);
+        post_content.removeEventListener('transitionend', handleTransitionEnd);
+    });
+
+    // Try to pause a Youtube video
+    pauseVideo(`YT${tree}${post}`);
+
+    // Try to pause a Soundcloud player 
+    tryPauseSoundCloudPlayer(tree, post);
 }
 
 
-
-
+// -------
+// YOUTUBE 
+// -------
 // Load the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
@@ -146,4 +155,22 @@ function pauseVideo(playerId) {
     if (players.hasOwnProperty(playerId) && typeof players[playerId].pauseVideo === 'function') {
         players[playerId].pauseVideo();
     }
+}
+
+
+
+// ----------
+// SOUNDCLOUD
+// ----------
+
+function tryPauseSoundCloudPlayer(tree, post) {
+    var iframeElement = document.getElementById(`SC${tree}${post}`);
+    if (iframeElement !== null) {
+        var widget = SC.Widget(iframeElement);
+        pauseSoundCloudPlayer(widget);
+    }
+}
+
+function pauseSoundCloudPlayer(widget) {
+    widget.pause();
 }
