@@ -11,7 +11,7 @@ for (let i = 1; i <= 3; i++) {
       targets: `#PostTree${i} #Tree > #Treetrunk > path`,
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: "linear",
-      duration: 3000,
+      duration: 3600,
       delay: function (el, j) {
         return j * 0;
       },

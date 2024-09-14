@@ -116,7 +116,7 @@ var players = {};
 // This function creates an <iframe> (and YouTube player) after the API code downloads.
 function onYouTubeIframeAPIReady() {
     const ids = [
-        'YT11', 'YT12', 'YT13', 'YT14', 'YT15', 'YT16', 'YT17',
+        'YT11', 'YT12', 'YT13', 'YT14', 'YT15', 'YT16', 'YT17', 'YT18',
         'YT21', 'YT22', 'YT23', 'YT24', 'YT25', 'YT26', 'YT27',
         'YT31', 'YT32', 'YT33', 'YT34', 'YT35', 'YT36', 'YT37'
     ];
