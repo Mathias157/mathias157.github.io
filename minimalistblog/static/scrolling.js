@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.currentSection = 0;
 
     // Play all animations before any scrolling, to ensure that desktop users see it too
-    for (i = 0; i <= 2; i++) {
+    for (i = 0; i <= 1; i++) {
         window.fruit_animations[i].play();
         window.post_tree_animations[i].play();
     }

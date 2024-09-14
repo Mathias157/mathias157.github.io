@@ -6,11 +6,16 @@ var $circle_init_scale = 1.25;
 // List to store fruit animations (posts)
 window.fruit_animations = [];
 
+// The durations for the staggered fruit animations (align with curve-animation.js for drawing tree!)
+const fruit_durations = [0.7, 0.7];
+const fruit_stagger_delay = [0.5, 0.5];
+const fruit_init_delay = [0.7, 0.5];
+
 // Wait for the SVG to load before applying effects
 document.addEventListener('DOMContentLoaded', function() {
 
     // Add hover effect to all elements with IDs in the form Post1, Post2, ..., PostN
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 1; i <= 2; i++) {
         
         const post_circles = [];
         let N_posts = document.querySelectorAll(`#PostTree${i} #Posts > g`).length;
@@ -75,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Animation to make the posts appear with a staggered effect
         let fruit_animation = gsap.fromTo(post_circles, 
                     { scale: 0, visibility: 'visible', transformOrigin: "center"}, 
-                    { scale: $circle_init_scale, duration: 0.7, transformOrigin: "center", stagger: 0.5, delay: 0.7, paused: true}
+                    { scale: $circle_init_scale, duration: fruit_durations[i-1], transformOrigin: "center", stagger: fruit_stagger_delay[i-1], delay: fruit_init_delay[i-1], paused: true}
                 );
         window.fruit_animations.push(fruit_animation)
     }
