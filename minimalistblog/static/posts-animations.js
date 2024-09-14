@@ -23,10 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let j = 1; j <= N_posts; j++) {
             let post = document.querySelector(`#PostTree${i} #Post${j}`);
 
-            // Hide viewbuttons, if they exist
+            // Make viewbuttons actual buttons
             let post_viewbutton = post.querySelector(`#ViewButton${j}`);
             if (post_viewbutton) {
-                post_viewbutton.style.opacity = 0;
                 post_viewbutton.addEventListener('click', function() {
                     openPost(i, j)
                 });
@@ -43,11 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Make post information visible
                 let info_text = document.querySelectorAll(`#PostTree${i} #Post${j} > g > text`)
                 info_text.forEach(element => {
+                    element.style.visibility = 'visible';
                     element.style.opacity = 1;
                 });
-
+                
                 // Show viewbutton if on small width device (note: Now it only shows the rounded rectangle!)
                 if (window.innerWidth < 750) {
+                    post_viewbutton.style.visibility = 'visible';
                     post_viewbutton.style.opacity = 1;
                 }
             })
@@ -60,11 +61,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 let info_text = document.querySelectorAll(`#PostTree${i} #Post${j} > g > text`)
                 info_text.forEach(element => {
                     element.style.opacity = 0;
+                    element.addEventListener('transitionend', function handleTransitionEnd() {
+                        element.style.visibility = 'hidden';
+                        element.removeEventListener('transitionend', handleTransitionEnd);
+                    });
                 });
                 
                 // Fade viewbutton away with small width device
                 if (window.innerWidth < 750) {
                     post_viewbutton.style.opacity = 0;
+                    post_viewbutton.addEventListener('transitionend', function handleTransitionEnd() {
+                        post_viewbutton.style.visibility = 'hidden';
+                        post_viewbutton.removeEventListener('transitionend', handleTransitionEnd);
+                    });
                 }
             })
             
@@ -101,8 +110,8 @@ function openPost(tree, post) {
 function closePost(tree, post) {
     let post_content = document.querySelector(`#Post${tree}${post}Content`)
     post_content.style.opacity = 0;
-
-    // This doesn't work for some reason (also tried with a timeout)
+    
+    // Make post_content unreachable after opacity transition end
     post_content.addEventListener('transitionend', function handleTransitionEnd() {
         post_content.style.visibility = 'hidden';
         post_content.removeEventListener('transitionend', handleTransitionEnd);
@@ -113,6 +122,7 @@ function closePost(tree, post) {
 
     // Try to pause a Soundcloud player 
     tryPauseSoundCloudPlayer(tree, post);
+    
 }
 
 

@@ -37,14 +37,17 @@ svg {
 #Posts > g > g > circle:hover {
     fill: #f07167 !important;
 }
-#Posts > g > g > path,
+
 #Posts > g > g > text {
+    visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
 /* Setting transition of all id's that contain ViewButton */
 [id^="ViewButton"] {
+    visibility: hidden;
+    opacity: 0;
     transition: opacity 0.5s ease;
 }
 
