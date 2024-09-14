@@ -87,7 +87,7 @@ svg {
 }
 
 /* The actual popup */
-.section .popup {
+.popup {
     visibility: hidden;
     position: fixed;
     z-index: 1;
@@ -163,10 +163,13 @@ svg {
         width: 300vw; /* 3 times the width of the viewport */
     }
     .section {
-        flex: 1 0 100vw; /* Each section takes up the full width of the viewport */
+        flex: 0 0 100vw; /* Each section takes up the full width of the viewport */
     }
 
-         
+    /* .section .popup {
+        width: 100%;
+    } */
+
     .popup .popup-content {
         flex-direction: column;
         width: 100%;
