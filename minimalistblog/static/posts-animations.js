@@ -96,7 +96,7 @@ function openPost(tree, post) {
 function closePost(tree, post) {
     let post_content = document.querySelector(`#Post${tree}${post}Content`)
     post_content.style.opacity = 0;
-    player.pauseVideo();
+    pauseVideo(`YT${tree}${post}`);
     setTimeout(function() {
         post_content.style.visibility = 'hidden';
     }, 500);
@@ -110,16 +110,23 @@ var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
 // Create a YouTube player variable
-var player;
+var players = {};
 
 // This function creates an <iframe> (and YouTube player) after the API code downloads.
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtubePlayer', {
-        events: {
-            'onReady': onPlayerReady
-        }
+    const ids = [
+        'YT11', 'YT12', 'YT13', 'YT14', 'YT15', 'YT16', 'YT17',
+        'YT21', 'YT22', 'YT23', 'YT24', 'YT25', 'YT26', 'YT27',
+        'YT31', 'YT32', 'YT33', 'YT34', 'YT35', 'YT36', 'YT37'
+    ];
+
+    ids.forEach(id => {
+        players[id] = new YT.Player(id, {
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
     });
 }
 
@@ -130,8 +137,8 @@ function onPlayerReady(event) {
 }
 
 // Function to pause the video
-function pauseVideo() {
-    if (player && player.pauseVideo) {
-        player.pauseVideo();
+function pauseVideo(playerId) {
+    if (players.hasOwnProperty(playerId) && typeof players[playerId].pauseVideo === 'function') {
+        players[playerId].pauseVideo();
     }
 }
